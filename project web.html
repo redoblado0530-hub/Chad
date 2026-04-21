@@ -1,0 +1,167 @@
+
+<html>
+<head>
+    <title>Simple Drawings by Chad</title>
+ 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <h1>Simple Drawing</h1>
+    
+    <div class="gallery">
+
+
+        <div class="card" onclick="openFull(this)">
+            <div class="post-header">
+                    <a href="#" class="post-title"><h1>Zoro's Poster</h1></a>
+            <img src="/IMG_20250109_090935.jpg" alt="zoro">
+            </div>
+            <br>
+            
+        <div class="rating">
+<input class="str" type="radio" name="star" id="star1"><label for="stars">&#9733;</label>
+
+<input type="radio" name="star" id="star2"    ><label for="star4"></label>&#9733;</label>
+
+<input type="radio" name="star" id="star3"><label for="star3">&#9733;</label> 
+
+<input type="radio" name="star" id="star2" ><label for star4">&#9733;</label>
+
+<input type="radio" name="star" id="star"> <label for="star5">&#9733</label>
+    </div>
+    <br>
+    <br>
+    <p class="post-description">
+                    I draw this because Zoro is one of my favourite One piece character in anime. it's inspire me to draw him because of his figure and drawable character.
+                </p>
+      </div>
+        
+
+        <div class="2">
+        <div class="card" onclick="openFull(this)">
+             <a href="#" class="post-title"><h1>Nagumo</h1></a>
+            <img src="/IMG_20250109_091333.jpg"
+        <div class="rating">
+    <br>
+<input type="radio" name="star" id="star1"><label for="stars">&#9733;</label>
+<input type="radio" name="star" id="star2"    ><label for="star4"></label>&#9733;</label>
+
+<input type="radio" name="star" id="star3"><label for="star3">&#9733;</label> 
+
+<input type="radio" name="star" id="star2" ><label for star4">&#9733;</label>
+
+<input type="radio" name="star" id="star"> <label for="star5">&#9733</label>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p class="post-description">
+                    I also draw this because he's also my favourite character. I draw this way back 2024.
+                </p>
+        </div>
+        </div>
+        
+        
+      <div class="3">
+        <div class="card" onclick="openFull(this)">
+             <a href="#" class="post-title"><h1>Gojo Saturo</h1></a>
+            <img src="/IMG_20250109_090836.jpg"alt="Gojo">
+
+ <div class="rating">
+     <br>
+<input type="radio" name="star" id="star1"><label for="stars">&#9733;</label>
+<input type="radio" name="star" id="star2"    ><label for="star4"></label>&#9733;</label>
+
+<input type="radio" name="star" id="star3"><label for="star3">&#9733;</label> 
+
+<input type="radio" name="star" id="star4" ><label for star4">&#9733;</label>
+
+<input type="radio" name="star" id="star5"> <label for="star5">&#9733</label>
+    </div>
+        <br>
+        <br><br><br>
+        <p class="post-description">
+                    This one is my first drawing, i draw this because i was bored and it turned out really well. 
+                </p>
+        </div>
+    </div>
+    
+    
+    
+    <div class="4">
+    <div class="card" onclick="openFull(this)">
+            <div class="post-header">
+                    <a href="#" class="post-title"><h1>Hisoka from HxH</h1></a>
+            <img src="/IMG_20250109_090453.jpg" alt="Hisoka">
+            </div>
+            <br>
+            
+        <div class="rating">
+<input type="radio" name="star" id="star1"><label for="stars">&#9733;</label>
+
+<input type="radio" name="star" id="star2"    ><label for="star4"></label>&#9733;</label>
+
+<input type="radio" name="star" id="star3"><label for="star3">&#9733;</label> 
+
+<input type="radio" name="star" id="star2" ><label for star4">&#9733;</label>
+
+<input type="radio" name="star" id="star"> <label for="star5">&#9733</label>
+    </div>
+    <br>
+    <br>
+    <p class="post-description">
+                    This drawing is one of my favourite.the details, eyes, hair i really love it and i also draw this way back 2024 and it turns out very pretty. 
+                </p>
+      </div>
+    </div>
+    
+       <div class="gallery">
+
+
+        <div class="card" onclick="openFull(this)">
+            <div class="post-header">
+                    <a href="#" class="post-title"><h1>Luffy's Poster</h1></a>
+            <img src="/IMG_20250109_090628.jpg" alt="luffy">
+            </div>
+            <br>
+            
+        <div class="rating">
+<input class="str" type="radio" name="star" id="star1"><label for="stars">&#9733;</label>
+
+<input type="radio" name="star" id="star2"    ><label for="star4"></label>&#9733;</label>
+
+<input type="radio" name="star" id="star3"><label for="star3">&#9733;</label> 
+
+<input type="radio" name="star" id="star2" ><label for star4">&#9733;</label>
+
+<input type="radio" name="star" id="star"> <label for="star5">&#9733</label>
+    </div>
+    <br>
+    <br>
+    <p class="post-description">
+                This drawing is also an anime character in one piece he's the main character in the series. I draw this because i really like his poster. 
+                </p>
+      </div>
+      
+    <div id="fullView" onclick="closeFull()">
+        <span class="close" onclick="closeFull()">&times;</span>
+        <img id="bigImage" src="">
+    </div>
+  <script>
+  function openFull(element) {
+            var img = element.querySelector('img');
+            var modal = document.getElementById('fullView');
+            var bigImg = document.getElementById('bigImage');
+            
+            bigImg.src = img.src;
+            modal.style.display = "flex";
+        }
+
+        function closeFull() {
+            document.getElementById('fullView').style.display = "none";
+        }
+  </script>
+
+</body>
+</html>
