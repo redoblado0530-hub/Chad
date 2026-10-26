@@ -1,0 +1,433 @@
+/* ==========================================================================
+   Campus Kainan / SL Eats - SCC College Single Stylesheet
+   All styles consolidated into one file
+   ========================================================================== */
+
+/* 1. Reset & Global Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f2;
+  color: #2b2b2b;
+  line-height: 1.5;
+}
+
+/* 2. Header & SCC College Branding */
+header {
+  background: #7d04a1;
+  color: white;
+  padding: 14px 20px;
+  text-align: center;
+}
+header h1 { font-size: 38px; margin-bottom: 2px; }
+header p { font-size: 14px; opacity: 0.9; }
+header a { color: #fff; text-decoration: underline; font-size: 13px; }
+
+.scc-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+/* 3. Layout Containers & Cards */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #dfe5da;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+.card h2 {
+  font-size: 20px;
+  color: #1b5e20;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #e8f0e4;
+  padding-bottom: 6px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.flex-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* 4. Active User / Session Bar */
+.user-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #dfe5da;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.user-bar .user-info { font-weight: bold; color: #1b5e20; }
+.user-bar a.logout-btn {
+  color: #c62828;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 4px 10px;
+  border: 1px solid #ffcdd2;
+  border-radius: 4px;
+  background: #ffebee;
+}
+.user-bar a.logout-btn:hover { background: #ef9a9a; }
+
+/* 5. Canteen Menu Grid & Item Cards */
+.section {
+  font-size: 16px;
+  color: #444;
+  margin: 14px 0 8px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+.item {
+  border: 1px solid #e3e8df;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+}
+.item .name { font-weight: bold; font-size: 14px; }
+.item .price { color: #c62828; font-size: 14px; font-weight: bold; }
+.item input[type="number"] {
+  width: 55px;
+  padding: 5px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* 6. Forms & Input Fields */
+label { display: block; font-size: 14px; margin-bottom: 4px; font-weight: bold; }
+input[type="text"], 
+input[type="password"], 
+input[type="number"].form-control, 
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.radio-group { display: flex; gap: 20px; margin-bottom: 12px; }
+.radio-group label { font-weight: normal; cursor: pointer; }
+
+/* 7. Buttons */
+button, .btn {
+  background: #7d04a1;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+button:hover, .btn:hover { background: #f57f17; }
+
+.btn-sm {
+  padding: 5px 12px;
+  font-size: 13px;
+  border-radius: 4px;
+  font-weight: normal;
+}
+.btn-primary { background: #1565c0 !important; }
+.btn-primary:hover { background: #0d47a1 !important; }
+.btn-danger { background: #c62828 !important; }
+.btn-danger:hover { background: #b71c1c !important; }
+.btn-secondary { background: #616161 !important; }
+.btn-secondary:hover { background: #424242 !important; }
+.btn-warning { background: #f57f17 !important; }
+.btn-warning:hover { background: #e65100 !important; }
+.btn-success { background: #2e7d32 !important; }
+.btn-success:hover { background: #1b5e20 !important; }
+.btn-full { width: 100%; margin-top: 6px; }
+
+/* 8. Summary Stats Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.stat-card {
+  background: white;
+  border: 1px solid #dfe5da;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+}
+.stat-card .num {
+  font-size: 26px;
+  font-weight: bold;
+  color: #7d04a1;
+  margin-top: 4px;
+}
+
+/* 9. Badges */
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.badge-meal { background: #fff8e1; color: #e65100; border: 1px solid #ffe082; }
+.badge-drink { background: #e1f5fe; color: #0277bd; border: 1px solid #b3e5fc; }
+.badge-available { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+.badge-unavailable { background: #ffebee; color: #c62828; border: 1px solid #ffcdd2; }
+.badge-pending { background: #fff3e0; color: #e65100; border: 1px solid #ffe0b2; }
+.badge-preparing { background: #e1f5fe; color: #0277bd; border: 1px solid #b3e5fc; }
+.badge-ready { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+.badge-completed { background: #ede7f6; color: #512da8; border: 1px solid #d1c4e9; }
+.badge-cancelled { background: #ffebee; color: #c62828; border: 1px solid #ffcdd2; }
+
+/* 10. Orders Dashboard Specific Styles */
+.order-box {
+  border: 1px solid #dfe5da;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: #fafbfa;
+}
+.order-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.order-box-header .title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1b5e20;
+}
+.order-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.status-select {
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  margin-bottom: 0;
+  width: auto;
+  cursor: pointer;
+  background: #fff;
+}
+.action-group {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.action-group form {
+  margin: 0;
+  display: inline-block;
+}
+
+/* 11. Tables */
+table { width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 14px; }
+th, td { padding: 8px; border-bottom: 1px solid #eee; text-align: left; }
+th { background: #f1f5ee; font-weight: bold; }
+td.right, th.right { text-align: right; }
+.table-responsive { overflow-x: auto; }
+
+/* 12. Alerts & Notices */
+.error { background: #ffebee; color: #b71c1c; padding: 10px 14px; border-radius: 5px; margin-bottom: 12px; border: 1px solid #ffcdd2; }
+.success { background: #e8f5e9; color: #1b5e20; padding: 10px 14px; border-radius: 5px; margin-bottom: 12px; border: 1px solid #c8e6c9; }
+
+.notice {
+  background: #fff8e1;
+  border: 1px dashed #f9a825;
+  padding: 14px;
+  border-radius: 6px;
+  text-align: center;
+  margin: 14px 0;
+}
+.notice .time { font-size: 30px; font-weight: bold; color: #1b5e20; }
+
+.ready {
+  background: #1b5e20;
+  color: #fff;
+  padding: 14px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.total-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.total-box .amount { font-size: 22px; color: #1b5e20; }
+
+/* 13. Login Portal Specific */
+.login-container {
+  max-width: 480px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+.login-tabs {
+  display: flex;
+  border-bottom: 2px solid #dfe5da;
+  margin-bottom: 20px;
+  gap: 8px;
+}
+.login-tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #e8ecdf;
+  border-radius: 6px 6px 0 0;
+  color: #555;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 15px;
+}
+.login-tab.active {
+  background: #7d04a1;
+  color: white;
+}
+.sample-creds {
+  background: #fff8e1;
+  border: 1px dashed #f9a825;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 14px;
+  font-size: 13px;
+  color: #5d4037;
+}
+.sample-creds code {
+  background: #fff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #c62828;
+}
+
+/* 14. Typography & Utility Helpers */
+.text-center { text-align: center; }
+.text-muted { color: #666; font-size: 13px; }
+.empty-msg { text-align: center; color: #777; padding: 25px; }
+.price-highlight { font-weight: bold; color: #c62828; }
+.code-text { font-family: monospace; font-size: 13px; color: #555; }
+.actions { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+
+/* 15. Footer */
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  padding: 24px 20px;
+}
+
+/* 16. Print Media Styles */
+@media print {
+  body { background: white; color: #000; }
+  header, footer, button, .btn, .actions, .user-bar { display: none !important; }
+  .container { max-width: 100%; margin: 0; padding: 0; }
+  .card { border: 1px solid #333; box-shadow: none; margin: 0 0 15px; }
+}
+
+.stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .stat-card {
+      background: white;
+      border: 1px solid #dfe5da;
+      border-radius: 8px;
+      padding: 14px;
+      text-align: center;
+    }
+    .stat-card .num {
+      font-size: 26px;
+      font-weight: bold;
+      color: #7d04a1;
+      margin-top: 4px;
+    }
+    .action-group {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .action-group form {
+      margin: 0;
+      display: inline-block;
+    }
